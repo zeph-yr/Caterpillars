@@ -88,7 +88,9 @@ namespace Worms
         internal static bool CheckForSS()
         {
             var ss_installed = PluginManager.GetPluginFromId("ScoreSaber");
-            return ss_installed != null;
+            var cc_installed = PluginManager.GetPluginFromId("CustomCampaigns");
+            
+            return ss_installed != null || cc_installed != null;
         }
     }
 }
