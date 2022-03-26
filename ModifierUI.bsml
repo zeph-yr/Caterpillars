@@ -1,0 +1,15 @@
+﻿<bg xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='https://monkeymanboy.github.io/BSML-Docs/ https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd'>
+	<settings-container child-control-width='true' child-expand-width='false' size-delta-y='-5'>
+		<checkbox-setting value='enabled' on-change='set_enabled' text='Enabled' hover-hint='Have fun!'></checkbox-setting>
+		<horizontal>
+		<text text = '------------------' font-color = '#00000000' font-size = '3'></text>
+		</horizontal>
+		<slider-setting id='links_slider' value ='links_value' on-change='set_links_value' text='Number of Links' increment='1' min='1' max='20'></slider-setting>
+		<slider-setting id='squish_slider' value ='squish_value' on-change='set_squish_value' text='Squish Factor' increment='0.05' min='0' max='1'></slider-setting>
+	</settings-container>
+	<vertical pad-top='50'>
+		<horizontal child-expand-width='true'>
+		<text text='Worms v0.0.1 by Zephyr#9125' font-color='#ff0080ff' font-size='3' align='Center'></text>
+		</horizontal>
+	</vertical>
+</bg>

@@ -50,7 +50,7 @@ namespace Worms
 
                     else //if (prev_noteData != null && prev_noteData.cutDirection != NoteCutDirection.Any)
                     {
-                        SliderData new_slider = SliderData.CreateBurstSliderData(prev_noteData.colorType, prev_noteData.time, prev_noteData.lineIndex, prev_noteData.noteLineLayer, prev_noteData.beforeJumpNoteLineLayer, prev_noteData.cutDirection, noteData.time, noteData.lineIndex, noteData.noteLineLayer, noteData.beforeJumpNoteLineLayer, noteData.cutDirection, 20, 1f);
+                        SliderData new_slider = SliderData.CreateBurstSliderData(prev_noteData.colorType, prev_noteData.time, prev_noteData.lineIndex, prev_noteData.noteLineLayer, prev_noteData.beforeJumpNoteLineLayer, prev_noteData.cutDirection, noteData.time, noteData.lineIndex, noteData.noteLineLayer, noteData.beforeJumpNoteLineLayer, noteData.cutDirection, (int)PluginConfig.Instance.links_value, PluginConfig.Instance.squish_value);
                         result_2.AddBeatmapObjectData(new_slider);
 
                         last_was_head = false;
@@ -59,6 +59,7 @@ namespace Worms
                     prev_noteData = noteData;
                     i++;
                 }
+
 
                 ObstacleData obstacleData;
                 if ((obstacleData = (beatmapDataItem as ObstacleData)) != null)

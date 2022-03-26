@@ -19,9 +19,6 @@ namespace Worms
         public const string HarmonyId = "com.zephyr.BeatSaber.Worms";
         internal static readonly HarmonyLib.Harmony harmony = new HarmonyLib.Harmony(HarmonyId);
 
-        internal static bool ss_installed = true;
-        internal static bool cc_installed = true;
-
 
         [Init]
         public Plugin(IPALogger logger, Config config)
@@ -37,8 +34,7 @@ namespace Worms
         public void OnEnable()
         {
             ApplyHarmonyPatches();
-
-            //BeatSaberMarkupLanguage.GameplaySetup.GameplaySetup.instance.AddTab("Worms", "Worms.ModifierUI.bsml", ModifierUI.instance);
+            BeatSaberMarkupLanguage.GameplaySetup.GameplaySetup.instance.AddTab("Worms", "Worms.ModifierUI.bsml", ModifierUI.instance);
         }
 
 

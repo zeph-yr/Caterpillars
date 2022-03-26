@@ -7,8 +7,8 @@ namespace Worms
 {
     class ModifierUI : NotifiableSingleton<ModifierUI>
     {
-        [UIValue("enable")]
-        public bool Enable
+        [UIValue("enabled")]
+        public bool Enabled
         {
             get => PluginConfig.Instance.enabled;
             set
@@ -16,17 +16,18 @@ namespace Worms
                 PluginConfig.Instance.enabled = value;
             }
         }
-        [UIAction("set_enable")]
-        void Set_Enable(bool value)
+        [UIAction("set_enabled")]
+        void Set_Enabled(bool value)
         {
-            Enable = value;
+            Enabled = value;
         }
 
 
         [UIComponent("links_slider")]
         public SliderSetting Links_Slider;
+
         [UIValue("links_value")]
-        public int Links_Value
+        public float Links_Value
         {
             get => PluginConfig.Instance.links_value;
             set
@@ -35,7 +36,7 @@ namespace Worms
             }
         }
         [UIAction("set_links_value")]
-        public void Set_Links_Value(int value)
+        public void Set_Links_Value(float value)
         {
             Links_Value = value;
         }
@@ -43,6 +44,7 @@ namespace Worms
 
         [UIComponent("squish_slider")]
         public SliderSetting Squish_Slider;
+
         [UIValue("squish_value")]
         public float Squish_Value
         {

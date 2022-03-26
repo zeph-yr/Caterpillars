@@ -10,7 +10,7 @@ namespace Worms.Configuration
 
         public virtual bool enabled { get; set; } = true;
 
-        public virtual int links_value { get; set; } = 20;
+        public virtual float links_value { get; set; } = 20f;
 
         public virtual float squish_value { get; set; } = 1f;
 

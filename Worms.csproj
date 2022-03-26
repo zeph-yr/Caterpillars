@@ -120,6 +120,7 @@
   <ItemGroup>
     <None Include="Directory.Build.props" Condition="Exists('Directory.Build.props')" />
     <None Include="Directory.Build.targets" Condition="Exists('Directory.Build.targets')" />
+    <EmbeddedResource Include="ModifierUI.bsml" />
     <None Include="Worms.csproj.user" Condition="Exists('Worms.csproj.user')" />
   </ItemGroup>
   <ItemGroup>
