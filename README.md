@@ -1,6 +1,7 @@
 # GummyWorms
 
-**Now you can play Centipede, with real centipede links. Or Ov as Worm Curls.**
+**Now you can play Centipede, with real centipede links. Or 14-star Ov as Worm Curls.**
+<p>Play any map as a pseudo-chain-link poodles worm curl thingy. Supports Solo, Party, Multiplayer, OST/DLCs</p>
 
 <p><img src="https://github.com/zeph-yr/GummyWorms/blob/master/Screenshots/worms_2.png" width="600"/></p>
 
