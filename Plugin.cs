@@ -34,7 +34,20 @@ namespace Worms
         public void OnEnable()
         {
             ApplyHarmonyPatches();
-            BeatSaberMarkupLanguage.GameplaySetup.GameplaySetup.instance.AddTab("Worms", "Worms.ModifierUI.bsml", ModifierUI.instance);
+            BeatSaberMarkupLanguage.GameplaySetup.GameplaySetup.instance.AddTab("GummyWorms", "Worms.ModifierUI.bsml", ModifierUI.instance);
+
+            if (CheckForSS() == true)
+            {
+                BS_Utils.Utilities.BSEvents.gameSceneLoaded += BSEvents_gameSceneLoaded;
+            }
+        }
+
+        private void BSEvents_gameSceneLoaded()
+        {
+            if (PluginConfig.Instance.enabled)
+            {
+                BS_Utils.Gameplay.ScoreSubmission.DisableSubmission("Worms");
+            }
         }
 
 
@@ -42,6 +55,7 @@ namespace Worms
         public void OnDisable()
         {
             RemoveHarmonyPatches();
+            BS_Utils.Utilities.BSEvents.gameSceneLoaded -= BSEvents_gameSceneLoaded;
         }
 
         internal static void ApplyHarmonyPatches()
@@ -69,6 +83,12 @@ namespace Worms
                 Plugin.Log?.Error("Error removing Harmony patches: " + ex.Message);
                 Plugin.Log?.Debug(ex);
             }
+        }
+
+        internal static bool CheckForSS()
+        {
+            var ss_installed = PluginManager.GetPluginFromId("ScoreSaber");
+            return ss_installed != null;
         }
     }
 }

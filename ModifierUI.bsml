@@ -4,12 +4,12 @@
 		<horizontal>
 		<text text = '------------------' font-color = '#00000000' font-size = '3'></text>
 		</horizontal>
-		<slider-setting id='links_slider' value ='links_value' on-change='set_links_value' text='Number of Links' increment='1' min='1' max='20'></slider-setting>
-		<slider-setting id='squish_slider' value ='squish_value' on-change='set_squish_value' text='Squish Factor' increment='0.05' min='0' max='1'></slider-setting>
+		<slider-setting id='links_slider' value ='links_value' on-change='set_links_value' text='Number of Links' increment='1' min='2' max='20'></slider-setting>
+		<slider-setting id='squish_slider' value ='squish_value' on-change='set_squish_value' text='Squish Factor' increment='0.05' min='0.05' max='1' hover-hint='0.05 is Flat. 1 is Round'></slider-setting>
 	</settings-container>
 	<vertical pad-top='50'>
 		<horizontal child-expand-width='true'>
-		<text text='Worms v0.0.1 by Zephyr#9125' font-color='#ff0080ff' font-size='3' align='Center'></text>
+		<text text='GummyWorms v0.0.1 by Zephyr#9125' font-color='#ff0080ff' font-size='3' align='Center'></text>
 		</horizontal>
 	</vertical>
 </bg>
