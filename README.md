@@ -1,7 +1,7 @@
 # Caterpillars Mod
 
-**Now you can play Centipede, with real centipede links. Or 14-star Ov as Worm Curls.**
-<p>Play any map as a pseudo-chain-link poodles worm curl thingy. Supports Solo, Party, Multiplayer, OST/DLCs</p>
+**Now you can play Centipede, with real centipede links. Or 14-star Ov as Worm Curls.
+Play any map as pseudo-chain-link poodles, worm curls, helices and all sorts of hilarity. Supports Solo, Party, Multiplayer, OST/DLCs**
 
 <p><img src="https://github.com/zeph-yr/Caterpillars/blob/master/Screenshots/worms_2.png" width="600"/></p>
 
