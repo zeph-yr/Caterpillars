@@ -44,9 +44,14 @@ namespace Worms
 
         private void BSEvents_gameSceneLoaded()
         {
+            if (BS_Utils.Gameplay.Gamemode.IsPartyActive || BS_Utils.Plugin.LevelData.Mode == BS_Utils.Gameplay.Mode.Multiplayer)
+            {
+                return;
+            }
+
             if (PluginConfig.Instance.enabled)
             {
-                BS_Utils.Gameplay.ScoreSubmission.DisableSubmission("Worms");
+                BS_Utils.Gameplay.ScoreSubmission.DisableSubmission("GummyWorms");
             }
         }
 
